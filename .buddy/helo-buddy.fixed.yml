@@ -5,6 +5,15 @@
   events:
   - type: WEBHOOK
   actions:
+  - action: cat info.txt
+    type: BUILD
+    execute_commands:
+    - echo "This is Buddy workspace" > info.txt
+    - cat info.txt
+    - ""
+    shell: BASH
+    docker_image_name: library/ubuntu
+    docker_image_tag: 20.04
   - action: echo "Hello Buddy"
     type: BUILD
     execute_commands:
