@@ -6,6 +6,14 @@
   - type: WEBHOOK
   - type: PUSH
   actions:
+  - action: echo Welcome $USERNAME
+    type: BUILD
+    execute_commands:
+    - echo Welcome $USERNAME
+    - ""
+    shell: BASH
+    docker_image_name: library/ubuntu
+    docker_image_tag: 20.04
   - action: cat info.txt
     type: BUILD
     execute_commands:
