@@ -5,3 +5,12 @@
   fail_on_prepare_env_warning: true
   events:
   - type: WEBHOOK
+  actions:
+  - action: echo "Pipeline A executed"
+    type: BUILD
+    execute_commands:
+    - echo "Pipeline A executed"
+    - ""
+    shell: BASH
+    docker_image_name: library/ubuntu
+    docker_image_tag: 20.04
