@@ -1,0 +1,8 @@
+pipelines:
+  - name: Buddy Pipeline from Git
+    trigger_mode: ON_EVERY_PUSH
+    actions:
+      - name: Show message
+        type: RUN_COMMAND
+        commands:
+          - echo "Pipeline running from .buddy.yml file"
