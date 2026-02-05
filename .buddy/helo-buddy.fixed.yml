@@ -6,15 +6,6 @@
   - type: WEBHOOK
   - type: PUSH
   actions:
-  - action: java one
-    type: BUILD
-    execute_commands:
-    - javac one.java
-    - java one
-    - ""
-    shell: BASH
-    docker_image_name: library/ubuntu
-    docker_image_tag: 20.04
   - action: echo Welcome $USERNAME
     type: BUILD
     execute_commands:
